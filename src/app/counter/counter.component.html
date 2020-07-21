@@ -1,0 +1,7 @@
+<h1>Counter : {{ (counterStore$ | async).counter }}</h1>
+<h3>{{(counterStore$ | async).mensagem}}</h3>
+<button (click)="decrement()">Decrement</button>
+<button (click)="increment()">Increment</button>
+<button (click)="reset()">Resetar Contador</button>
+<button (click)="limparTexto()">limpar Texto</button>
+<input type="text" name="mensagem" (keyup)="alterarTexto($event.target.value)">
